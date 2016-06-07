@@ -3,3 +3,6 @@
 !.htaccess
 !.gitignore
 /nbproject/private/
+.c9
+
+tests/_output/*
