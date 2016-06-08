@@ -1,9 +1,4 @@
 #! /usr/bin/env php
 <?php
 
-define( 'ROOT_PATH', __DIR__ );
-define( 'APP_ENV', php_sapi_name == 'cli' ? getenv('APP_ENV') : $_SERVER['APP_ENV'] );
-
-require_once( './Application.php' );
-
-print_r(APP_ENV);
+require_once( 'index.php' );

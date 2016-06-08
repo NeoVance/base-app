@@ -195,6 +195,7 @@ class Application {
                 $view->setDI($di);
                 $view->setViewsDir(ROOT_PATH . '/themes/default/');
                 
+                // TODO: View engines can be modularized...
                 $view->registerEngines(Baseapp\Library\Tool::registerEngines($view, $di));
                 
                 echo $view->render( 'error', [ 'errors' => $errors ] );
@@ -229,6 +230,7 @@ class Application {
             }
             exit();
         } else {
+            // TODO: Log location could be configurable
             $logger = new \Phalcon\Logger\Adapter\File(ROOT_PATH . '/app/common/logs/' . date('Ymd') . '.log', array('mode' => 'a+'));
             $log = '';
 
