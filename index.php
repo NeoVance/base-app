@@ -1,4 +1,4 @@
-<?php_sapi_name
+<?php
 
 define( 'ROOT_PATH', __DIR__ );
 // Environment type should be defined via environment, not configuration
@@ -9,6 +9,6 @@ require_once( './Application.php' );
 try {
     // TODO: Handle
     $app = Application::main();
-} catch( $e ) {
+} catch( Exception $e ) {
     Application::exception( $e );
 }
